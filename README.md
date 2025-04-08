@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  A complete authentication solution for Next.js applications with MongoDB integration and beautiful UI.
+  A quick start template for Next.js applications with MongoDB integration and authentication.
 </p>
 
 [Features](#features) • [Demo](#demo) • [Getting Started](#getting-started) • [Project Structure](#project-structure) • [Customization](#customization) • [Contributing](#contributing) • [License](#license)
@@ -40,19 +40,10 @@
       <td align="center" width="33%">
         <h3>👤 User Management</h3>
         <ul align="left">
-          <li>Beautiful profile page</li>
+          <li>Profile page</li>
           <li>Profile information update</li>
           <li>Avatar generation</li>
           <li>Account security settings</li>
-        </ul>
-      </td>
-      <td align="center" width="33%">
-        <h3>🎨 UI/UX</h3>
-        <ul align="left">
-          <li>Responsive design</li>
-          <li>Modern form styling</li>
-          <li>Tailwind CSS components</li>
-          <li>Loading states and animations</li>
         </ul>
       </td>
     </tr>
@@ -126,8 +117,8 @@
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/nextauth-starter.git
-   cd nextauth-starter
+   git clone https://github.com/MarcosBrendonDePaula/NextAuthStarter.git
+   cd NextAuthStarter
    ```
 
 2. Copy the `.env.example` file to `.env` and update the values:
@@ -218,7 +209,7 @@ All pages are fully responsive and work well on:
 
 ### Modern UI Components
 
-- Beautiful form inputs with icons
+- Form inputs with icons
 - Show/hide password toggles
 - Loading states and animations
 - Toast notifications for success/error messages
@@ -273,7 +264,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-Made with ❤️ by [Your Name](https://github.com/your-username)
+Made with ❤️ by [MarcosBrendonDePaula](https://github.com/MarcosBrendonDePaula)
 
 Star ⭐ this repository if you find it useful!
 
