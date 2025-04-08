@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 min-h-screen flex flex-col`}
       >
         <SessionProvider>
           <ThemeProvider>
@@ -36,13 +36,13 @@ export default function RootLayout({
             <main className="flex-grow">
               {children}
             </main>
-            <footer className="bg-white dark:bg-gray-800 shadow-inner py-6 mt-auto">
+            <footer className="bg-white shadow-inner py-6 mt-auto">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
-                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  <p className="text-gray-500 text-sm">
                     NextAuth Starter Template &copy; {new Date().getFullYear()}
                   </p>
-                  <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">
+                  <p className="text-gray-400 text-xs mt-1">
                     A complete authentication solution for Next.js applications
                   </p>
                 </div>

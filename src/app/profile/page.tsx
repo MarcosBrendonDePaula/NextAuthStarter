@@ -7,14 +7,12 @@ import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { FaUser, FaEnvelope, FaSave, FaSignOutAlt, FaCheck, FaTimes } from 'react-icons/fa';
 import { profileUpdateSchema, type ProfileUpdateInput } from '@/lib/validations';
-import { useTheme } from '@/components/ThemeProvider';
 
 export default function ProfilePage() {
   const { data: session, status, update } = useSession();
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const router = useRouter();
-  const { theme } = useTheme();
 
   // Redirect if not authenticated
   if (status === 'unauthenticated') {

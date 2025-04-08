@@ -8,14 +8,12 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaEye, FaEyeSlash, FaEnvelope, FaLock, FaSignInAlt } from 'react-icons/fa';
 import { loginSchema, type LoginInput } from '@/lib/validations';
-import { useTheme } from '@/components/ThemeProvider';
 
 export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const router = useRouter();
-  const { theme } = useTheme();
   
   const {
     register,

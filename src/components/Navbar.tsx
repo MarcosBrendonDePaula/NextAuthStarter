@@ -4,14 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
-import { FaUser, FaSignOutAlt, FaHome, FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
-import { useTheme } from './ThemeProvider';
+import { FaUser, FaSignOutAlt, FaHome, FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Navbar() {
   const { data: session, status } = useSession();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   const isActive = (path: string) => {
     return pathname === path;
@@ -63,18 +61,6 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <FaSun className="h-5 w-5" />
-              ) : (
-                <FaMoon className="h-5 w-5" />
-              )}
-            </button>
-            
             {status === 'authenticated' ? (
               <div className="flex items-center space-x-4 ml-4">
                 <span className="text-sm text-gray-700">
@@ -111,18 +97,6 @@ export default function Navbar() {
             )}
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <FaSun className="h-5 w-5" />
-              ) : (
-                <FaMoon className="h-5 w-5" />
-              )}
-            </button>
-            
             <button
               onClick={toggleMenu}
               className="ml-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"

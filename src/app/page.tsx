@@ -4,11 +4,9 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaUserPlus, FaSignInAlt, FaUserCircle, FaDatabase, FaLock, FaUserShield } from "react-icons/fa";
-import { useTheme } from "@/components/ThemeProvider";
 
 export default function Home() {
   const { data: session, status } = useSession();
-  const { theme } = useTheme();
   
   // Pre-populate with user data if needed
   const defaultUserData = {

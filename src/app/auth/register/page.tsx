@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaEye, FaEyeSlash, FaEnvelope, FaLock, FaUser, FaUserPlus } from 'react-icons/fa';
 import { registerSchema, type RegisterInput } from '@/lib/validations';
-import { useTheme } from '@/components/ThemeProvider';
 
 export default function RegisterPage() {
   const [error, setError] = useState<string | null>(null);
@@ -15,7 +14,6 @@ export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false);
   const router = useRouter();
-  const { theme } = useTheme();
   
   const {
     register,
