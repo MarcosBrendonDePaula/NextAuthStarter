@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  A complete authentication solution for Next.js applications with MongoDB integration, dark mode, and beautiful UI.
+  A complete authentication solution for Next.js applications with MongoDB integration and beautiful UI.
 </p>
 
 [Features](#features) • [Demo](#demo) • [Getting Started](#getting-started) • [Project Structure](#project-structure) • [Customization](#customization) • [Contributing](#contributing) • [License](#license)
@@ -49,7 +49,6 @@
       <td align="center" width="33%">
         <h3>🎨 UI/UX</h3>
         <ul align="left">
-          <li>Light and dark mode</li>
           <li>Responsive design</li>
           <li>Modern form styling</li>
           <li>Tailwind CSS components</li>
@@ -95,15 +94,10 @@
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="50%">
-        <p><strong>Light Mode</strong></p>
-        <!-- Replace with actual screenshot of your application in light mode -->
-        <img src="https://via.placeholder.com/600x400?text=Light+Mode" alt="Light Mode" width="100%" />
-      </td>
-      <td align="center" width="50%">
-        <p><strong>Dark Mode</strong></p>
-        <!-- Replace with actual screenshot of your application in dark mode -->
-        <img src="https://via.placeholder.com/600x400?text=Dark+Mode" alt="Dark Mode" width="100%" />
+      <td align="center" width="100%">
+        <p><strong>Main Interface</strong></p>
+        <!-- Replace with actual screenshot of your application -->
+        <img src="https://via.placeholder.com/600x400?text=Main+Interface" alt="Main Interface" width="100%" />
       </td>
     </tr>
     <tr>
@@ -186,9 +180,8 @@
 │   │   ├── auth/         # Authentication pages
 │   │   └── profile/      # User profile page
 │   ├── components/       # React components
-│   │   ├── Navbar.tsx    # Navigation bar with theme toggle
-│   │   ├── SessionProvider.tsx # NextAuth session provider
-│   │   └── ThemeProvider.tsx   # Theme provider for dark mode
+│   │   ├── Navbar.tsx    # Navigation bar
+│   │   └── SessionProvider.tsx # NextAuth session provider
 │   ├── lib/              # Utility functions
 │   │   ├── mongodb.ts    # MongoDB connection utility
 │   │   └── validations.ts # Zod validation schemas
@@ -215,14 +208,6 @@
 5. **Protected Routes**: Middleware ensures certain routes are only accessible to authenticated users.
 
 ## 🎨 UI Features
-
-### Dark Mode Support
-
-The template includes a complete dark mode implementation:
-- Theme toggle in the navigation bar
-- System preference detection
-- Persistent theme selection with localStorage
-- Tailwind CSS dark mode classes
 
 ### Responsive Design
 
