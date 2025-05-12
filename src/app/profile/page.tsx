@@ -14,17 +14,11 @@ export default function ProfilePage() {
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const router = useRouter();
 
-  // Redirect if not authenticated
-  if (status === 'unauthenticated') {
-    router.push('/auth/login');
-    return null;
-  }
-
   // Pre-populate with user data
   const defaultUserData = {
-    firstName: 'marcos',
-    lastName: 'brendon',
-    email: 'n@gmail.com',
+    firstName: '',
+    lastName: '',
+    email: '',
   };
 
   const {
@@ -39,6 +33,12 @@ export default function ProfilePage() {
       email: session?.user?.email || defaultUserData.email,
     },
   });
+  
+  // Redirect if not authenticated
+  if (status === 'unauthenticated') {
+    router.push('/auth/login');
+    return null;
+  }
 
   const onSubmit = async (data: ProfileUpdateInput) => {
     try {

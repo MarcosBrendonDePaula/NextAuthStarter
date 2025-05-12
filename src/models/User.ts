@@ -23,7 +23,7 @@ const UserSchema: Schema = new Schema(
         validator: function (v: string) {
           return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v);
         },
-        message: (props: any) => `${props.value} is not a valid email address!`,
+        message: (props: { value: string }) => `${props.value} is not a valid email address!`,
       },
     },
     firstName: {
@@ -62,8 +62,9 @@ UserSchema.pre('save', async function (next) {
     // Override the cleartext password with the hashed one
     this.password = hash;
     next();
-  } catch (error: any) {
-    next(error);
+  } catch (error: unknown) {
+    // Pass the error to next
+    next(error instanceof Error ? error : new Error('Unknown error during password hashing'));
   }
 });
 
@@ -71,7 +72,10 @@ UserSchema.pre('save', async function (next) {
 UserSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
   try {
     return await bcrypt.compare(candidatePassword, this.password);
-  } catch (error) {
+  } catch (
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _
+  ) {
     return false;
   }
 };

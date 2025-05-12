@@ -103,12 +103,122 @@ export default function Home() {
                 Hello, {userName}!
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-300 lg:mx-auto">
-                You're logged in to your account. You can now access all the features of the application.
+                You&apos;re logged in to your account. You can now access all the features of the application.
               </p>
             </div>
           </div>
         </div>
       )}
+
+      {/* Getting Started Section */}
+      <div className="bg-gray-50 dark:bg-gray-900 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base text-blue-600 dark:text-blue-400 font-semibold tracking-wide uppercase">🚀 Getting Started</h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              Set up your development environment
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-300 lg:mx-auto">
+              Follow these steps to get the project running on your local machine.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <div className="space-y-10">
+              {/* Prerequisites */}
+              <div className="relative">
+                <h3 className="text-2xl leading-6 font-bold text-gray-900 dark:text-white mb-4">Prerequisites</h3>
+                <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-2">
+                  <li>Node.js 18+ and npm</li>
+                  <li>Docker and Docker Compose (for MongoDB)</li>
+                </ul>
+              </div>
+
+              {/* Environment Setup */}
+              <div className="relative">
+                <h3 className="text-2xl leading-6 font-bold text-gray-900 dark:text-white mb-4">Environment Setup</h3>
+                
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-2">Clone the repository</p>
+                  <div className="bg-gray-800 rounded-md p-4 overflow-x-auto">
+                    <pre className="text-blue-300">
+                      <code>git clone https://github.com/MarcosBrendonDePaula/NextAuthStarter.git
+cd NextAuthStarter</code>
+                    </pre>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-2">Copy the .env.example file to .env and update the values:</p>
+                  <div className="bg-gray-800 rounded-md p-4 overflow-x-auto">
+                    <pre className="text-blue-300">
+                      <code>cp .env.example .env</code>
+                    </pre>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-2">Update the following environment variables in the .env file:</p>
+                  <div className="bg-gray-800 rounded-md p-4 overflow-x-auto">
+                    <pre className="text-blue-300">
+                      <code>NEXTAUTH_SECRET=your-secret-key-change-this-in-production
+MONGODB_URI=mongodb://admin:password@localhost:27017/nextauth-starter?authSource=admin
+NEXTAUTH_URL=http://localhost:3000</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+              {/* Running the Application */}
+              <div className="relative">
+                <h3 className="text-2xl leading-6 font-bold text-gray-900 dark:text-white mb-4">Running the Application</h3>
+                
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-2">Start the MongoDB database using Docker Compose:</p>
+                  <div className="bg-gray-800 rounded-md p-4 overflow-x-auto">
+                    <pre className="text-blue-300">
+                      <code>docker-compose up -d</code>
+                    </pre>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-2">Install dependencies:</p>
+                  <div className="bg-gray-800 rounded-md p-4 overflow-x-auto">
+                    <pre className="text-blue-300">
+                      <code>npm install</code>
+                    </pre>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-2">Run the development server with Turbopack:</p>
+                  <div className="bg-gray-800 rounded-md p-4 overflow-x-auto">
+                    <pre className="text-blue-300">
+                      <code>npm run dev</code>
+                    </pre>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 dark:text-gray-300 mt-4">
+                  Open <a href="http://localhost:3000" className="text-blue-600 dark:text-blue-400 hover:underline">http://localhost:3000</a> with your browser to see the application.
+                </p>
+              </div>
+
+              {/* Available Scripts */}
+              <div className="relative">
+                <h3 className="text-2xl leading-6 font-bold text-gray-900 dark:text-white mb-4">Available Scripts</h3>
+                <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-2">
+                  <li><code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">npm run dev</code> - Start the development server with Turbopack</li>
+                  <li><code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">npm run build</code> - Build the application for production</li>
+                  <li><code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">npm run start</code> - Start the production server</li>
+                  <li><code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">npm run lint</code> - Run ESLint to check code quality</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Features Section */}
       <div className="bg-white dark:bg-gray-800 py-12">
